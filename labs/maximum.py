@@ -1,9 +1,8 @@
 def max (a,b,c=None):
-    lst=[]
-    lst.append(a)
-    lst.append(b)
-    if c is not None:
-        lst.append(c)
+    if c is None:
+        lst=[a,b]
+    else:
+        lst=[a,b,c]    
     lst.sort(reverse=True)
     return lst[0]
 

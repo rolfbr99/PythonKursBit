@@ -1,2 +1,2 @@
 set FLASK_APP=bookservice.py
-python -m flask run
+C:/miniconda3/python.exe -m flask run

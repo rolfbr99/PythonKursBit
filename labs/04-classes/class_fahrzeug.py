@@ -12,7 +12,6 @@ class Fahrzeug:
         return self.typ + " mit Farbe=" + self.farbe + ", Baujahr=" + str(self.baujahr)
 
 
-
 class Fahrrad(Fahrzeug):
     def __init__(self, farbe, baujahr, marke):
         super().__init__("Fahrrad", farbe, baujahr)

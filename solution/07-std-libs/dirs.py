@@ -1,22 +1,18 @@
 import os
 
-def dirWalker(path, level):
-    contents = os.listdir(path)
-    dirs  = [el for el in contents if os.path.isdir(path + el)]
-    files = []
-    for content in contents:
-        p = path + content
-        isFile = os.path.isfile(p)
-        if isFile:
-            files.append(content)    
-    intend = " " * (level * 2)
+def dir_walker(path, level):
+    content = os.listdir(path)
+    dirs  = [el for el in content if os.path.isdir(path + el)]
+    files = [el for el in content if os.path.isfile(path + el)]
+    intend = " " * (level*2)
     for file in files:
         print(intend + file)
-    for d in dirs:
-        print(intend + d)
-        dirWalker(path + d + "/", level + 1)
-    
-# start
-path = "D:/dev/iten-engineering/workshop/lab/09-apps/"
-dirWalker(path, 0)    
+    for dir in dirs:
+        print(intend + dir)
+        dir_walker(path + dir + "/", level+1)
+
+# start_path = "/home/lab/workspace/python-solution/09-apps/"
+start_path = "D:/dev/surfmachine/python/solution/09-apps/"
+dir_walker(start_path, 0)
+
 

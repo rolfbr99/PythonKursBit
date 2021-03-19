@@ -5,25 +5,22 @@ def show(date, day, month, year):
     print("  month =", month)
     print("  year  =", year)
 
-dates = ["15.01.2007","3.5.99","14.8.2012"]
+dates = ["17.04.1966", "1.3.07", "15.8.2021"]
 
-"""
+print("--- Solution with split ---")
 for date in dates:
     tokens = date.split(sep=".")
-    show(date, tokens[0],tokens[1],tokens[2])
-"""
+    day   = tokens[0]
+    month = tokens[1]
+    year  = tokens[2]
+    show(date, day, month, year)
 
+print("--- Solution with index und slicing ---")
 for date in dates:
     idx1 = date.index(".")
     idx2 = date.index(".", idx1+1)
-    # split day...
-    day = date[0:idx1]
+    day   = date[0:idx1]
     month = date[idx1+1:idx2]
     year  = date[idx2+1:]
-    # show result
     show(date, day, month, year)
-
-
-
-
 

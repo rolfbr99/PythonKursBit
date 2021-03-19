@@ -1,17 +1,17 @@
 
-print("Geben Sie bitte einen Integer ein oder 'x' zum beenden der Eingage:")
+
+print("Geben Sie bitte einen Integer ein oder 'x' um die Eingabe zu beenden:")
 
 numbers = []
-
-while True:
+while (True):
     try:
-        value = input("Wert =")
+        value = input("value = ")
         if (value == "x"):
-            break
+            break;
         number = int(value)
-        numbers.append(number)    
+        numbers.append(number)
     except:
-        print("Ungültiger Wert:", value, "Geben Sie bitte eine Zahl ein")
+        print("Ungültiger Wert:", value, "Geben Sie bitte einen Integer Wert ein!")
 
-print("Eingegebe Werte")
+print("\nEingegebene Werte:")
 print(numbers)

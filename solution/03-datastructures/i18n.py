@@ -6,10 +6,14 @@ i18n = {
     "en" : "Good morning"
 }
 
-name = input("Name    = ")
-key  = input("Sprache = ")
+name = input("Geben Sie bitte Ihren Namen ein: ")
+key = input("Wählen Sie die Sprache [de, fr, it, en]: ")
 
+# check if key is available
 key = key if key in i18n.keys() else "en"
 
+# greeting
 greeting = i18n[key]
-print(greeting, name)
+print(greeting)
+print(name)
+
